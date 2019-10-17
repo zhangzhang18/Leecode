@@ -1,11 +1,11 @@
-package dto;
+package interview.list;
 
 /**
  * @Description:
  * @Author: zhangchunmeng
  * @Date: 2019-10-16
  */
-public class Stack {
+public class CuttingSolution {
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             System.out.println("length:" + i);

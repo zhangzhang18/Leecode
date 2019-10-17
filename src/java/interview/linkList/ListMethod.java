@@ -1,4 +1,7 @@
-package dto;
+package interview.linkList;
+
+
+import interview.linkList.entity.Node;
 
 /**
  * @Description:

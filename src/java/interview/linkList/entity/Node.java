@@ -1,4 +1,4 @@
-package dto;
+package interview.linkList.entity;
 
 /**
  * @Description:
@@ -6,8 +6,8 @@ package dto;
  * @Date: 2019-10-12
  */
 public class Node {
-    int value;
-    Node next;
+    public int value;
+    public Node next;
 
     public int getValue() {
         return value;

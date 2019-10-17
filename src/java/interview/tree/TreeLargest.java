@@ -1,7 +1,6 @@
-package interview;
+package interview.tree;
 
-import dto.Tree;
-import dto.TreeNode;
+import interview.tree.entity.TreeNode;
 
 import java.util.*;
 
@@ -10,7 +9,7 @@ import java.util.*;
  * @Author: zhangchunmeng
  * @Date: 2019-10-17
  */
-public class TreeTest1 {
+public class TreeLargest {
 
     public static void printTree(Tree root) {
         if (root != null) {

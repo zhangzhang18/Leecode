@@ -1,4 +1,4 @@
-package dto;
+package interview.tree.entity;
 
 /**
  * @Description:
