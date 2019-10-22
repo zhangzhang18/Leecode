@@ -11,17 +11,17 @@ import java.util.*;
  */
 public class TreeLargest {
 
-    public static void printTree(Tree root) {
+    public static void printTree(TreeNode root) {
         if (root != null) {
             //下一层的节点数
             int nextLevel = 0;
             //当前层还没打印的节点说
             int tobePrint = 1;
-            Stack<Tree> stack = new Stack<>();
+            Stack<TreeNode> stack = new Stack<>();
             stack.push(root);
             while (!stack.empty()) {
-                Tree node = stack.pop();
-                System.out.println(node.value);
+                TreeNode node = stack.pop();
+                System.out.println(node.val);
                 if (node.left != null) {
                     stack.push(node.left);
                     nextLevel++;

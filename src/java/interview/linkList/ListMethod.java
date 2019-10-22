@@ -1,7 +1,7 @@
 package interview.linkList;
 
 
-import interview.linkList.entity.Node;
+import interview.linkList.entity.ListNode;
 
 /**
  * @Description:
@@ -13,20 +13,20 @@ public class ListMethod {
 
     }
 
-    void deleteDuplication(Node head) {
-        Node preNode = null;
-        Node node = head;
+    void deleteDuplication(ListNode head) {
+        ListNode preNode = null;
+        ListNode node = head;
 
         while (node != null) {
             boolean needDelete = false;
-            Node next = node.next;
-            if (next != null && next.value == node.value) {
+            ListNode next = node.next;
+            if (next != null && next.val == node.val) {
                 needDelete = true;
             }
             if (needDelete) {
-                int value = node.value;
-                Node toBeDelete = node;
-                while (toBeDelete != null && toBeDelete.value == value) {
+                int value = node.val;
+                ListNode toBeDelete = node;
+                while (toBeDelete != null && toBeDelete.val == value) {
                     next = toBeDelete.next;
                     deleteNode(toBeDelete);
                     toBeDelete = next;
@@ -45,19 +45,19 @@ public class ListMethod {
         }
     }
 
-    void deleteNode(Node toBeDelete) {
+    void deleteNode(ListNode toBeDelete) {
 
     }
 
-    Node meetingNode(Node head) {
+    ListNode meetingNode(ListNode head) {
         if (head == null) {
             return null;
         }
-        Node slow = head.next;
+        ListNode slow = head.next;
         if (slow == null) {
             return null;
         }
-        Node fast = slow.next;
+        ListNode fast = slow.next;
         while (slow != null && fast != null) {
             if (slow == fast) {
                 return fast;
@@ -88,12 +88,12 @@ public class ListMethod {
         return 0;
     }
 
-    boolean isIntersert(Node h1, Node h2) {
+    boolean isIntersert(ListNode h1, ListNode h2) {
         if (h1 == null || h2 == null) {
             return false;
         }
-        Node tail = h1;
-        Node tail2 = h2;
+        ListNode tail = h1;
+        ListNode tail2 = h2;
         while (tail.next != null) {
             tail = tail.next;
         }
@@ -103,14 +103,14 @@ public class ListMethod {
         return tail == tail2;
     }
 
-    public Node reverse(Node head) {
+    public ListNode reverse(ListNode head) {
         if (head == null) {
             return null;
         }
-        Node prev = null;
-        Node now = head;
+        ListNode prev = null;
+        ListNode now = head;
         while (now != null) {
-            Node next = now.next;
+            ListNode next = now.next;
             now.next = prev;
             prev = now;
             now = next;
@@ -118,24 +118,24 @@ public class ListMethod {
         return prev;
     }
 
-    Node nodeOfLoop(Node head) {
+    ListNode nodeOfLoop(ListNode head) {
         if (head == null) {
             return null;
         }
         //得到相遇节点
-        Node meetingNode = meetingNode(head);
+        ListNode meetingNode = meetingNode(head);
         if (meetingNode == null) {
             return null;
         }
         //得到环节点数
         int nodeInLoopNum = 1;
-        Node p1 = meetingNode;
+        ListNode p1 = meetingNode;
         while (p1.next != meetingNode) {
             p1 = p1.next;
             ++nodeInLoopNum;
         }
         p1 = head;
-        Node p2 = head;
+        ListNode p2 = head;
         //p1先移动环节点数nodeInLoopNum步
         for (int i = 0; i < nodeInLoopNum; i++) {
             p1 = p1.next;
