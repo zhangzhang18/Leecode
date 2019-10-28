@@ -1,4 +1,4 @@
-package interview.toutiao;
+package bytedance;
 
 import java.util.Arrays;
 

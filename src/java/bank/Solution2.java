@@ -57,23 +57,25 @@ public class Solution2 {
         while (!l1Stack.empty() && !l2Stack.empty()) {
             int count = l1Stack.pop() + l2Stack.pop() + num;
             num = count / 10;
-            ListNode newNode = new ListNode(count);
+            ListNode newNode = new ListNode(count % 10);
             newNode.next = node;
             node = newNode;
         }
         while (!l1Stack.empty()) {
-            ListNode newNode = new ListNode(l1Stack.pop() + num);
+            int count = l1Stack.pop() + num;
+            num = count / 10;
+            ListNode newNode = new ListNode(count % 10);
             newNode.next = node;
             node = newNode;
-            num = 0;
         }
         while (!l2Stack.empty()) {
-            ListNode newNode = new ListNode(l2Stack.pop() + num);
+            int count = l2Stack.pop() + num;
+            num = count / 10;
+            ListNode newNode = new ListNode(count % 10);
             newNode.next = node;
             node = newNode;
-            num = 0;
         }
-        if (num == 1) {
+        if (num != 0) {
             ListNode newNode = new ListNode(1);
             newNode.next = node;
             node = newNode;
