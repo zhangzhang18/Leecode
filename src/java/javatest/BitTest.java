@@ -29,7 +29,7 @@ public class BitTest {
                 BigDecimal.valueOf(150).divide(BigDecimal.valueOf(100), 2, RoundingMode.HALF_UP);
         System.out.println(multiple.multiply(BigDecimal.valueOf(10)));
 
-        System.out.println(Arrays.toString(new String("rrdul_8080").getBytes()));
+        System.out.println(Arrays.toString("rrdul_8080".getBytes()));
     }
 
     public static Long minusDaysToLong(int subDay) {
