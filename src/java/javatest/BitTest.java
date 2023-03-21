@@ -13,6 +13,7 @@ public class BitTest {
         System.out.println("2 | 8 =" + (2 | 8)); // 0 1 0 1 =10
         // 0 0 1 1
         System.out.println("4 & 6 =" + (4 & 6));
+        System.out.println("4 & 6 =" + (4 & 6));
 
 
     }
