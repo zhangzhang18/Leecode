@@ -9,6 +9,7 @@ public class BitTest {
         System.out.println("1 << 1 =" + (1 << 1));// 0 0 0 1
         System.out.println("1 << 2 =" + (1 << 2));// 0 0 1 0
         System.out.println("1 << 3 =" + (1 << 3));// 0 1 0 0
+        System.out.println("1 << 3 =" + (1 << 3));// 0 1 0 0
         System.out.println("2 | 4 =" + (2 | 4)); // 0 0 1 1 =6
         System.out.println("2 | 8 =" + (2 | 8)); // 0 1 0 1 =10
         // 0 0 1 1
